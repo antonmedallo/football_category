@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/anton/OneDrive/Documents/GitHub/football_category/football_category/db.sqlite3" readonly="0" foreign_keys="" case_sensitive_like="" temp_store="" wal_autocheckpoint="" synchronous=""/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="125"/><column_width id="3" width="3822"/><column_width id="4" width="0"/></tab_structure><tab_browse><current_table name="0,0:"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">INSERT INTO football_category_categories 
+VALUES (1, 'Joueur de champ', '' )
+;
+INSERT INTO football_category_categories 
+VALUES (2, 'Gardien de but', '' )
+;
+INSERT INTO football_category_categories 
+VALUES (3, 'Défenseur', 1 )
+;
+INSERT INTO football_category_categories 
+VALUES (4, 'Milieu de Terrain', 1 )
+;
+INSERT INTO football_category_categories 
+VALUES (5, 'Attaquant', 1 )
+;
+INSERT INTO football_category_categories 
+VALUES (6, 'Gardien Libero', 2 )
+;
+
+INSERT INTO football_category_categories 
+VALUES (7, 'Gardien Prudent', 2 )
+
+
+;
+DELETE FROM football_category_categories WHERE 1=1
+;
+DELETE FROM football_category_players WHERE 1=1
+;
+
+SELECT * 
+FROM football_category_categories
+; 
+
+INSERT INTO football_category_players
+VALUES (1, 'Lionel Messi', '1987-06-24', '' , 5 )
+;
+INSERT INTO football_category_players
+VALUES (2, 'Hugo Lloris', '1986-12-26', '' , 7 )
+;
+SELECT * 
+FROM football_category_players</sql><sql name="SQL 3">INSERT INTO categoryApp_players
+SELECT * FROM football_category_players
+  
+INSERT INTO categoryApp_categories 
+VALUES (1, 'Joueur de champ', '' )
+;
+INSERT INTO categoryApp_categories 
+VALUES (2, 'Gardien de but', '' )
+;
+INSERT INTO categoryApp_categories 
+VALUES (3, 'Défenseur', 1 )
+;
+INSERT INTO categoryApp_categories 
+VALUES (4, 'Milieu de Terrain', 1 )
+;
+INSERT INTO categoryApp_categories 
+VALUES (5, 'Attaquant', 1 )
+;
+INSERT INTO categoryApp_categories 
+VALUES (6, 'Gardien Libero', 2 )
+;
+
+INSERT INTO categoryApp_categories 
+VALUES (7, 'Gardien Prudent', 2 )
+
+
+;
+DELETE FROM football_category_categories WHERE 1=1
+;
+DELETE FROM football_category_players WHERE 1=1
+;
+
+SELECT * 
+FROM categoryApp_categories
+; 
+SELECT * 
+FROM categoryApp_players
+
+INSERT INTO football_category_players
+VALUES (1, 'Lionel Messi', '1987-06-24', '' , 5 )
+;
+INSERT INTO football_category_players
+VALUES (2, 'Hugo Lloris', '1986-12-26', '' , 7 )
+;
+SELECT * 
+FROM football_category_players</sql><current_tab id="1"/></tab_sql></sqlb_project>

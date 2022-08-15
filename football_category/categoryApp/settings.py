@@ -11,10 +11,15 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+
+BASE_DIR=Path(__file__).resolve(strict=True).parent.parent
+MEDIA_URL='/Photos/'
+MEDIA_ROOT=os.path.join(BASE_DIR,"Photos")
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -39,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles', 
     'rest_framework', 
     'corsheaders', 
-    'football_category',
+    'categoryApp',
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -56,7 +61,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'football_category.urls'
+ROOT_URLCONF = 'categoryApp.urls'
 
 TEMPLATES = [
     {
@@ -74,7 +79,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'football_category.wsgi.application'
+WSGI_APPLICATION = 'categoryApp.wsgi.application'
 
 
 # Database

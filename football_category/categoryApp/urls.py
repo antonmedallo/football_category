@@ -13,9 +13,20 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path
+#from django.conf.urls import url
+from django.urls import re_path as url
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-]
+from categoryApp import views
+
+from django.conf.urls.static import static
+from django.conf import settings
+
+urlpatterns=[
+    url(r'^category$',views.categoryApi),
+    url(r'^category/([0-9]+)$',views.categoryApi),
+
+    url(r'^player$',views.playerApi),
+    url(r'^player/([0-9]+)$',views.playerApi),
+
+    url(r'^player/savefile',views.SaveFile)
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
